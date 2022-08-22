@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+:root {
+  /* colors */
+  --bg-primary: #FFFFFF;
+  --bg-secondary: #F9F9F9;
+  --bg-accent: #F1F4FF;
+  --c-primary: #000;
+  --c-secondary: #828282;
+  --c-accent: #052CC2;
+
+  /* fonts */
+  --font-sans: 'Inter', sans-serif;
+}
+
+aside > ul {
+  max-height: calc(100vh - 83px);
+}

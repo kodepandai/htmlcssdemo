@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./app.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <main class="bg-secondary min-h-screen w-full flex flex-col font-sans">
+    <!-- top bar -->
+    <div class="flex justify-between bg-primary px-6 h-[83px] items-center">
+      <div></div>
+      <div>Sign in as test@test.com</div>
+    </div>
+    <!-- end of top bar -->
+
+    <!-- sidebar -->
+    <aside class="bg-primary w-[260px] fixed h-screen">
+      <!-- logo -->
+      <div class="h-[83px] px-6 items-center flex">
+        <img src="./assets/logo.png" width="112" class="object-contain" alt="noble logo"/>
+      </div>
+      <!-- end of logo -->
+
+      <!-- side menu -->
+      <ul class="flex flex-col px-6 whitespace-nowrap overflow-y-auto">
+        <li class="text-secondary">
+          <a href="#" class="flex-row flex p-4 justify-between">
+            <div class="flex flex-row"><img src="./assets/icons/paper.svg" class="mr-3"/>Instructions</div>
+          </a>
+        </li>
+        <li class="text-secondary">
+          <a href="#" class="flex-row flex p-4 justify-between">
+            <div class="flex flex-row"><img src="./assets/icons/activity.svg" class="mr-3"/>Organization</div>
+          </a>
+        </li>
+        <li class="text-secondary">
+          <a href="#" class="flex-row flex p-4 justify-between">
+            <div class="flex flex-row"><img src="./assets/icons/document.svg" class="mr-3"/>About</div>
+            <img src="./assets/icons/arrow-down.svg"/>
+          </a>
+        </li>
+        <li class="text-secondary">
+          <a href="#" class="flex-row flex p-4 justify-between bg-accent rounded-lg text-accent font-bold">
+            <div class="flex flex-row"><img src="./assets/icons/user.svg" class="mr-3"/>Team</div>
+            <img src="./assets/icons/arrow-up.svg"/>
+          </a>
+          <ul class="pl-10">
+            <li>
+              <a href="#" class="flex-row flex p-4">Staff</a>
+            </li>
+            <li class="text-accent font-bold">
+              <a href="#" class="flex-row flex p-4">Board of Directors</a>
+            </li>
+          </ul>
+        </li>
+        <li class="text-secondary">
+          <a href="#" class="flex-row flex p-4 justify-between">
+            <div class="flex flex-row"><img src="./assets/icons/calendar.svg" class="mr-3"/>Calendar</div>
+          </a>
+        </li>
+        <li class="text-secondary">
+          <a href="#" class="flex-row flex p-4 justify-between">
+            <div class="flex flex-row"><img src="./assets/icons/category.svg" class="mr-3"/>More</div>
+            <img src="./assets/icons/arrow-down.svg"/>
+          </a>
+        </li>
+      </ul>
+      <!-- end of side menu -->
+
+    </aside>
+    <!-- end of sidebar -->
+  </main>
+  
+</body>
+</html>

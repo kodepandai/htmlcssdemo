@@ -1,0 +1,15 @@
+{
+  "name": "noble",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "tailwindcss -i ./src/app.css -o ./src/app.min.css --watch",
+    "build": "tailwindcss -i ./src/app.css -o ./src/app.min.css --minify"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^3.1.8"
+  }
+}
