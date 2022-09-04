@@ -18,9 +18,16 @@
         class="flex justify-between px-6 h-[83px] items-center fixed bg-secondary w-full left-0 z-10"
       >
         <div></div>
-        <div class="flex flex-row">
+        <div class="flex flex-row relative py-3">
           <span class="mr-4"> Sign in as test@test.com </span>
           <img src="./assets/icons/arrow-down.svg" />
+
+          <div class="dropdown">
+            <button class="dropdown-item">
+              <img src="./assets/icons/logout.svg" />
+              <span class="ml-2">Log Out</span>
+            </button>
+          </div>
         </div>
       </div>
       <!-- end of top bar -->
@@ -134,118 +141,13 @@
       <!-- main content -->
       <div class="flex flex-col pl-[260px] w-full mt-[83px] justify-between">
         <!-- content -->
-        <div class="p-6 text-primary">
-          <!-- content card -->
-          <div class="bg-primary rounded-2xl w-full p-10">
-            <!-- content header -->
-            <div class="flex flex-row justify-between mb-6">
-              <h1 class="text-title font-bold">Board of Directors</h1>
-              <div class="flex-row flex items-center">
-                <div class="flex-row flex mx-8">
-                  <div class="toggle active">
-                    <div></div>
-                  </div>
-
-                  <label>Reorder Rows</label>
-                </div>
-                <button class="btn btn-accent">Add Directors</button>
-              </div>
+        <div class="p-6 text-primary w-4/5 mx-auto mt-14">
+          <div class="flex flex-row justify-between">
+            <h1 class="text-title font-bold">History</h1>
+            <div>
+              <button class="btn btn-transparent w-32">Reset</button>
+              <button class="btn btn-accent w-32">Save</button>
             </div>
-            <!-- end of content header -->
-
-            <!-- content body -->
-            <div class="table-wrapper">
-              <table class="table">
-                <thead>
-                  <tr>
-                    <th class="table-index"></th>
-                    <th>Name</th>
-                    <th>Title</th>
-                    <th>Email</th>
-                    <th>Department</th>
-                    <th>Country</th>
-                    <th>Bio</th>
-                    <th></th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td class="table-index">
-                      <div>1</div>
-                    </td>
-                    <td class="relative">
-                      <div class="flex flex-row items-center min-w-[150px]">
-                        <img
-                          src="https://picsum.photos/seed/id1/40"
-                          class="w-10 h-10 rounded-full object-cover"
-                        />
-                        <span class="ml-6">John Smith</span>
-                      </div>
-                    </td>
-                    <td>CEO</td>
-                    <td>johnsmith923@gmail.com</td>
-                    <td>Accounting</td>
-                    <td>Ukraine</td>
-                    <td>
-                      <span class="min-w-[200px] flex"
-                        >This is an example description. this description
-                        is</span
-                      >
-                    </td>
-                    <td>
-                      <div class="relative flex justify-end">
-                        <button class="flex-shrink-0 flex">
-                          <img src="./assets/icons/three-dots.svg" />
-                        </button>
-                        <div class="dropdown">
-                          <button class="dropdown-item">
-                            <img src="./assets/icons/edit.svg" />
-                            <span class="ml-2">Edit</span>
-                          </button>
-                          <button class="dropdown-item">
-                            <img src="./assets/icons/delete.svg" />
-                            <span class="ml-2">Delete</span>
-                          </button>
-                        </div>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="table-index">
-                      <div>2</div>
-                    </td>
-                    <td>
-                      <div class="flex flex-row items-center min-w-[150px]">
-                        <img
-                          src="https://picsum.photos/seed/id2/40"
-                          class="w-10 h-10 rounded-full object-cover"
-                        />
-                        <span class="ml-6">Jane Doe</span>
-                      </div>
-                    </td>
-                    <td>Co-Founder</td>
-                    <td>johnsmithzzz923@gmail.com</td>
-                    <td>IT</td>
-                    <td>United States</td>
-                    <td>This is an example description. this description is</td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            <!-- end of content body -->
-          </div>
-          <!-- end of content card -->
-
-          <div class="mt-10 flex flex-row justify-end items-center">
-            <div class="flex-row flex mx-8">
-              <div class="toggle active">
-                <div></div>
-              </div>
-              <label>Reorder Rows</label>
-            </div>
-
-            <button class="btn btn-accent btn-lg">Add Directors</button>
           </div>
         </div>
         <!-- end of content -->

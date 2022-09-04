@@ -1,5 +1,11 @@
-.btn-accent {
-  @apply bg-accent text-white font-semibold h-10 px-6 rounded-md;
+.btn {
+  @apply font-semibold h-10 px-6 rounded-md;
+  &-accent {
+    @apply bg-accent text-white;
+  }
+  &-transparent {
+    @apply text-primary;
+  }
   &.btn-lg {
     @apply h-14;
   }
