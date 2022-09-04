@@ -1,0 +1,6 @@
+.dropdown {
+  @apply bg-primary shadow py-2 rounded-lg right-0 flex flex-col absolute w-max top-full;
+  &-item {
+    @apply flex flex-row flex-nowrap px-4 py-2 items-center;
+  }
+}

@@ -11,7 +11,7 @@
 <body>
   <main class="bg-secondary min-h-screen w-full flex flex-row font-sans">
     <!-- sidebar -->
-    <aside class="bg-primary w-[260px] h-screen">
+    <aside class="bg-primary w-[260px] h-screen fixed">
       <!-- logo -->
       <div class="h-[83px] px-6 items-center flex">
         <img src="./assets/logo.png" width="112" class="object-contain" alt="noble logo"/>
@@ -86,7 +86,7 @@
     <!-- end of sidebar -->
     
     <!-- main content --> 
-    <div class="flex flex-col w-full">
+    <div class="flex flex-col pl-[260px] w-full">
       <!-- top bar -->
       <div class="flex justify-between px-6 h-[83px] items-center">
         <div></div>
@@ -132,24 +132,41 @@
               <tbody>
                 <tr>
                   <td>
-                    <div class="flex flex-row items-center">
+                    <div class="flex flex-row items-center min-w-[150px]">
                       <img src="https://picsum.photos/seed/id1/40" class="w-10 h-10 rounded-full object-cover"/> 
-                      <span class="ml-6 whitespace-nowrap">John Smith</span>
+                      <span class="ml-6">John Smith</span>
                     </div>
                   </td>
                   <td>CEO</td>
                   <td>johnsmith923@gmail.com</td>
                   <td>Accounting</td>
                   <td>Ukraine</td>
-                  <td>This is an example description. this description is formatted text and can be styled in different ways if the user chooses to do so</td>
                   <td>
+                    <span class="min-w-[200px] flex">This is an example description. this description is formatted text and can be styled in different ways if the user chooses to do so</span>
+                  </td>
+                  <td>
+                    <div class="relative flex justify-end">
+                      <button class="flex-shrink-0 flex">
+                        <img src="./assets/icons/three-dots.svg" />
+                      </button>
+                      <div class="dropdown">
+                        <button class="dropdown-item">
+                          <img src="./assets/icons/edit.svg"/>
+                          <span class="ml-2">Edit</span>
+                        </button>
+                        <button class="dropdown-item">
+                          <img src="./assets/icons/delete.svg"/>
+                          <span class="ml-2">Delete</span>
+                        </button>
+                      </div>
+                    </div>
                   </td>
                 </tr>
                 <tr>
                   <td>
-                    <div class="flex flex-row items-center">
+                    <div class="flex flex-row items-center min-w-[150px]">
                       <img src="https://picsum.photos/seed/id2/40" class="w-10 h-10 rounded-full object-cover"/> 
-                      <span class="ml-6 whitespace-nowrap">Jane Doe</span>
+                      <span class="ml-6">Jane Doe</span>
                     </div>
                   </td>
                   <td>Co-Founder</td>
