@@ -1,0 +1,15 @@
+.table {
+  &-wrapper {
+    @apply w-full overflow-x-auto border rounded-lg;
+  }
+  @apply  text-sm w-full;
+  td {
+    @apply p-4 max-w-xs;
+  }
+  thead {
+    @apply  h-10 bg-gray-100 text-gray-800;
+  }
+  tbody tr:not(:last-child){
+    @apply border-b;
+  }
+}

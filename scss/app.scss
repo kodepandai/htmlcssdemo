@@ -1,0 +1,13 @@
+@import "root.scss";
+
+/* import components */
+@import "component/button.scss";
+@import "component/table.scss";
+@import "component/toggle.scss";
+
+
+aside > ul {
+  max-height: calc(100vh - 83px);
+}
+
+
