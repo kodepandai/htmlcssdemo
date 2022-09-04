@@ -14,7 +14,10 @@ module.exports = {
         secondary: "var(--c-secondary)",
         accent: "var(--c-accent)",
         gray: {
+          50: "Var(--c-gray-50)",
           100: "var(--c-gray-100)",
+          200: "var(--c-gray-200)",
+          300: "var(--c-gray-300)",
           800: "var(--c-gray-800)",
         },
       },

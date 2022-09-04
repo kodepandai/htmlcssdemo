@@ -3,10 +3,10 @@
 /* import components */
 @import "component/button.scss";
 @import "component/dropdown.scss";
+@import "component/input.scss";
 @import "component/side-menu.scss";
 @import "component/table.scss";
 @import "component/toggle.scss";
-
 
 aside {
   > ul {
@@ -15,4 +15,10 @@ aside {
   }
 }
 
+p {
+  line-height: 25.6px;
+}
 
+.card {
+  @apply rounded-2xl bg-primary border border-gray-200;
+}
