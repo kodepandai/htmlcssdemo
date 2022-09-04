@@ -1,0 +1,17 @@
+.side-menu {
+  @apply flex flex-col px-6 whitespace-nowrap overflow-y-auto text-secondary;
+  li {
+    a {
+      @apply flex-row flex p-4 justify-between;
+      > div {
+        @apply flex flex-row;
+      }
+      &.active {
+        @apply flex-row flex p-4 justify-between bg-accent rounded-lg text-white font-bold;
+        ~ ul > li.active {
+          @apply text-accent font-bold;
+        }
+      }
+    }
+  }
+}

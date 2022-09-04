@@ -517,14 +517,11 @@ video {
 .relative{
   position: relative;
 }
-.sticky{
-  position: sticky;
+.left-0{
+  left: 0px;
 }
 .bottom-0{
   bottom: 0px;
-}
-.left-0{
-  left: 0px;
 }
 .z-10{
   z-index: 10;
@@ -536,11 +533,17 @@ video {
   margin-left: 2rem;
   margin-right: 2rem;
 }
+.mr-4{
+  margin-right: 1rem;
+}
 .mr-3{
   margin-right: 0.75rem;
 }
 .mt-6{
   margin-top: 1.5rem;
+}
+.mt-\[83px\]{
+  margin-top: 83px;
 }
 .mb-6{
   margin-bottom: 1.5rem;
@@ -554,12 +557,6 @@ video {
 .mt-10{
   margin-top: 2.5rem;
 }
-.mt-\[83px\]{
-  margin-top: 83px;
-}
-.mr-4{
-  margin-right: 1rem;
-}
 .mr-8{
   margin-right: 2rem;
 }
@@ -569,11 +566,11 @@ video {
 .table{
   display: table;
 }
-.h-screen{
-  height: 100vh;
-}
 .h-\[83px\]{
   height: 83px;
+}
+.h-screen{
+  height: 100vh;
 }
 .h-10{
   height: 2.5rem;
@@ -613,12 +610,6 @@ video {
 }
 .justify-between{
   justify-content: space-between;
-}
-.overflow-y-auto{
-  overflow-y: auto;
-}
-.whitespace-nowrap{
-  white-space: nowrap;
 }
 .rounded-lg{
   border-radius: 0.5rem;
@@ -666,18 +657,11 @@ video {
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
-.px-4{
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
 .pl-10{
   padding-left: 2.5rem;
 }
 .pl-\[260px\]{
   padding-left: 260px;
-}
-.pb-10{
-  padding-bottom: 2.5rem;
 }
 .font-sans{
   font-family: var(--font-sans);
@@ -692,15 +676,15 @@ video {
 .font-bold{
   font-weight: 700;
 }
-.text-secondary{
-  color: var(--c-secondary);
-}
 .text-white{
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 .text-accent{
   color: var(--c-accent);
+}
+.text-secondary{
+  color: var(--c-secondary);
 }
 .text-primary{
   color: var(--c-primary);
@@ -764,6 +748,40 @@ video {
   padding-right: 1rem;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
+}
+.side-menu{
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  white-space: nowrap;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  color: var(--c-secondary);
+}
+.side-menu li a{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 1rem;
+}
+.side-menu li a > div{
+  display: flex;
+  flex-direction: row;
+}
+.side-menu li a.active{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-radius: 0.5rem;
+  background-color: rgb(var(--bg-accent)/var(--tw-bg-opacity));
+  padding: 1rem;
+  font-weight: 700;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+.side-menu li a.active ~ ul > li.active{
+  font-weight: 700;
+  color: var(--c-accent);
 }
 .table-index{
   position: absolute;
