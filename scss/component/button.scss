@@ -1,3 +1,6 @@
 .btn-accent {
   @apply bg-accent text-white font-semibold h-10 px-6 rounded-md;
+  &.btn-lg {
+    @apply h-14;
+  }
 }

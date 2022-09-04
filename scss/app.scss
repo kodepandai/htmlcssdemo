@@ -7,8 +7,11 @@
 @import "component/toggle.scss";
 
 
-aside > ul {
-  max-height: calc(100vh - 83px);
+aside {
+  > ul {
+    padding-bottom: 200px;
+    max-height: calc(100vh - 83px);
+  }
 }
 
 

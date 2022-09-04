@@ -1,104 +1,160 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="./app.min.css" rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
-</head>
-<body>
-  <main class="bg-secondary min-h-screen w-full flex flex-row font-sans">
-    <!-- sidebar -->
-    <aside class="bg-primary w-[260px] h-screen fixed">
-      <!-- logo -->
-      <div class="h-[83px] px-6 items-center flex">
-        <img src="./assets/logo.png" width="112" class="object-contain" alt="noble logo"/>
-      </div>
-      <!-- end of logo -->
-
-      <!-- side menu -->
-      <ul class="flex flex-col px-6 whitespace-nowrap overflow-y-auto">
-        <li class="text-secondary">
-          <a href="#" class="flex-row flex p-4 justify-between">
-            <div class="flex flex-row"><img src="./assets/icons/paper.svg" class="mr-3"/>Instructions</div>
-          </a>
-        </li>
-        <li class="text-secondary">
-          <a href="#" class="flex-row flex p-4 justify-between">
-            <div class="flex flex-row"><img src="./assets/icons/home.svg" class="mr-3"/>Organization</div>
-          </a>
-        </li>
-        <li class="text-secondary">
-          <a href="#" class="flex-row flex p-4 justify-between">
-            <div class="flex flex-row"><img src="./assets/icons/wallet.svg" class="mr-3"/>Fundraising</div>
-            <img src="./assets/icons/arrow-down.svg"/>
-          </a>
-        </li>
-        <li class="text-secondary">
-          <a href="#" class="flex-row flex p-4 justify-between">
-            <div class="flex flex-row"><img src="./assets/icons/document.svg" class="mr-3"/>About</div>
-            <img src="./assets/icons/arrow-down.svg"/>
-          </a>
-        </li>
-        <li class="text-secondary">
-          <a href="#" class="flex-row flex p-4 justify-between bg-accent rounded-lg text-white font-bold">
-            <div class="flex flex-row"><img src="./assets/icons/user.svg" class="mr-3"/>Team</div>
-            <img src="./assets/icons/arrow-up.svg"/>
-          </a>
-          <ul class="pl-10">
-            <li>
-              <a href="#" class="flex-row flex p-4">Staff</a>
-            </li>
-            <li class="text-accent font-bold">
-              <a href="./board-of-directors.html" class="flex-row flex p-4">Board of Directors</a>
-            </li>
-          </ul>
-        </li>
-        <li class="text-secondary">
-          <a href="#" class="flex-row flex p-4 justify-between">
-            <div class="flex flex-row"><img src="./assets/icons/activity.svg" class="mr-3"/>Activities</div>
-            <img src="./assets/icons/arrow-down.svg"/>
-          </a>
-        </li>
-        <li class="text-secondary">
-          <a href="#" class="flex-row flex p-4 justify-between">
-            <div class="flex flex-row"><img src="./assets/icons/plus.svg" class="mr-3"/>Add</div>
-            <img src="./assets/icons/arrow-down.svg"/>
-          </a>
-        </li>
-        <li class="text-secondary">
-          <a href="#" class="flex-row flex p-4 justify-between">
-            <div class="flex flex-row"><img src="./assets/icons/calendar.svg" class="mr-3"/>Calendar</div>
-          </a>
-        </li>
-        <li class="text-secondary">
-          <a href="#" class="flex-row flex p-4 justify-between">
-            <div class="flex flex-row"><img src="./assets/icons/category.svg" class="mr-3"/>More</div>
-            <img src="./assets/icons/arrow-down.svg"/>
-          </a>
-        </li>
-      </ul>
-      <!-- end of side menu -->
-
-    </aside>
-    <!-- end of sidebar -->
-    
-    <!-- main content --> 
-    <div class="flex flex-col pl-[260px] w-full">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./app.min.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main class="bg-secondary min-h-screen w-full flex flex-row font-sans">
       <!-- top bar -->
-      <div class="flex justify-between px-6 h-[83px] items-center">
+      <div
+        class="flex justify-between px-6 h-[83px] items-center fixed bg-secondary w-full left-0 z-10"
+      >
         <div></div>
-        <div>Sign in as test@test.com</div>
+        <div class="flex flex-row">
+          <span class="mr-4"> Sign in as test@test.com </span>
+          <img src="./assets/icons/arrow-down.svg" />
+        </div>
       </div>
       <!-- end of top bar -->
+      <!-- sidebar -->
+      <aside class="bg-primary w-[260px] h-screen fixed z-20">
+        <!-- logo -->
+        <div class="h-[83px] px-6 items-center flex">
+          <img
+            src="./assets/logo.png"
+            width="112"
+            class="object-contain"
+            alt="noble logo"
+          />
+        </div>
+        <!-- end of logo -->
 
-      <!-- content -->
-      <!-- end of content -->
+        <!-- side menu -->
+        <ul class="flex flex-col px-6 whitespace-nowrap overflow-y-auto">
+          <li class="text-secondary">
+            <a href="#" class="flex-row flex p-4 justify-between">
+              <div class="flex flex-row">
+                <img src="./assets/icons/paper.svg" class="mr-3" />Instructions
+              </div>
+            </a>
+          </li>
+          <li class="text-secondary">
+            <a href="#" class="flex-row flex p-4 justify-between">
+              <div class="flex flex-row">
+                <img src="./assets/icons/home.svg" class="mr-3" />Organization
+              </div>
+            </a>
+          </li>
+          <li class="text-secondary">
+            <a href="#" class="flex-row flex p-4 justify-between">
+              <div class="flex flex-row">
+                <img src="./assets/icons/wallet.svg" class="mr-3" />Fundraising
+              </div>
+              <img src="./assets/icons/arrow-down.svg" />
+            </a>
+          </li>
+          <li class="text-secondary">
+            <a href="#" class="flex-row flex p-4 justify-between">
+              <div class="flex flex-row">
+                <img src="./assets/icons/document.svg" class="mr-3" />About
+              </div>
+              <img src="./assets/icons/arrow-down.svg" />
+            </a>
+          </li>
+          <li class="text-secondary">
+            <a
+              href="#"
+              class="flex-row flex p-4 justify-between bg-accent rounded-lg text-white font-bold"
+            >
+              <div class="flex flex-row">
+                <img src="./assets/icons/user.svg" class="mr-3" />Team
+              </div>
+              <img src="./assets/icons/arrow-up.svg" />
+            </a>
+            <ul class="pl-10">
+              <li>
+                <a href="#" class="flex-row flex p-4">Staff</a>
+              </li>
+              <li class="text-accent font-bold">
+                <a href="./board-of-directors.html" class="flex-row flex p-4"
+                  >Board of Directors</a
+                >
+              </li>
+            </ul>
+          </li>
+          <li class="text-secondary">
+            <a href="#" class="flex-row flex p-4 justify-between">
+              <div class="flex flex-row">
+                <img src="./assets/icons/activity.svg" class="mr-3" />Activities
+              </div>
+              <img src="./assets/icons/arrow-down.svg" />
+            </a>
+          </li>
+          <li class="text-secondary">
+            <a href="#" class="flex-row flex p-4 justify-between">
+              <div class="flex flex-row">
+                <img src="./assets/icons/plus.svg" class="mr-3" />Add
+              </div>
+              <img src="./assets/icons/arrow-down.svg" />
+            </a>
+          </li>
+          <li class="text-secondary">
+            <a href="#" class="flex-row flex p-4 justify-between">
+              <div class="flex flex-row">
+                <img src="./assets/icons/calendar.svg" class="mr-3" />Calendar
+              </div>
+            </a>
+          </li>
+          <li class="text-secondary">
+            <a href="#" class="flex-row flex p-4 justify-between">
+              <div class="flex flex-row">
+                <img src="./assets/icons/category.svg" class="mr-3" />More
+              </div>
+              <img src="./assets/icons/arrow-down.svg" />
+            </a>
+          </li>
+        </ul>
+        <!-- end of side menu -->
+
+        <!-- Questions us card -->
+        <div class="p-6 absolute bottom-0">
+          <div class="bg-tertiary rounded-2xl p-4">
+            <div class="font-bold">Questions?</div>
+            <div class="text-secondary text-sm">
+              Don’t hesitate to contact us. We will help you
+            </div>
+            <button class="btn-accent w-full mt-6">Email Us</button>
+          </div>
+        </div>
+        <!-- end of Questions us card -->
+      </aside>
+      <!-- end of sidebar -->
+
+      <!-- main content -->
+      <div class="flex flex-col pl-[260px] w-full mt-[83px] justify-between">
+        <!-- content -->
+        <div class="p-6 text-primary"></div>
+        <!-- end of content -->
+
+        <footer
+          class="py-4 px-6 text-sm text-primary justify-between flex flex-row"
+        >
+          <div>© 2022 Noble. All rights reserved.</div>
+          <div>
+            <a href="#" class="text-accent mr-8">Terms of Use</a>
+            <a href="#" class="text-accent">Privacy Policy</a>
+          </div>
+        </footer>
       </div>
-    <!-- end of main content -->
-  </main>
-  
-</body>
+      <!-- end of main content -->
+    </main>
+  </body>
 </html>
