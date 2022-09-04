@@ -1,4 +1,10 @@
 .table {
+  &-index{
+    @apply absolute h-full -ml-[47px] mt-2;
+    div {
+      @apply border-gray-800 border rounded h-6 w-6 flex items-center justify-center;
+    }
+  }
   &-wrapper {
     @apply w-full overflow-x-auto border rounded-lg;
   }

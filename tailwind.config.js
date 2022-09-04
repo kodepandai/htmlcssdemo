@@ -23,6 +23,9 @@ module.exports = {
       fontSize: {
         title: "32px",
       },
+      boxShadow: {
+        DEFAULT: "var(--shadow-default)",
+      },
     },
   },
   plugins: [],
