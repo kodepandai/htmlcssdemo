@@ -11,8 +11,12 @@
       rel="stylesheet"
     />
   </head>
-  <body>
-    <main class="bg-secondary min-h-screen w-full flex flex-row font-sans">
+  <body id="app">
+    <main
+      class="bg-secondary min-h-screen w-full flex flex-row font-sans"
+      x-data="history"
+      x-init="onMount()"
+    >
       <!-- top bar -->
       <div
         class="flex justify-between px-6 h-[83px] items-center fixed bg-secondary w-full left-0 z-10"
@@ -71,7 +75,10 @@
           <li>
             <a href="#" class="active">
               <div>
-                <img src="./assets/icons/document.svg" class="mr-3" />About
+                <img
+                  src="./assets/icons/document-light.svg"
+                  class="mr-3"
+                />About
               </div>
               <img src="./assets/icons/arrow-up.svg" />
             </a>
@@ -140,8 +147,8 @@
           <div class="flex flex-row justify-between">
             <h1 class="text-title font-bold">History</h1>
             <div>
-              <button class="btn btn-transparent w-32">Reset</button>
-              <button class="btn btn-accent w-32">Save</button>
+              <button class="btn btn-transparent">Reset</button>
+              <button class="btn btn-accent">Save</button>
             </div>
           </div>
           <p class="text-gray-800 mb-6">
@@ -164,9 +171,79 @@
           <div class="card p-6 mb-6">
             <h2 class="font-bold mb-4">Story / History Description</h2>
             <div class="textarea">
-              <div class="textarea-toolbar"></div>
+              <div class="textarea-toolbar">
+                <div class="flex flex-row flex-wrap">
+                  <button><image src="./assets/icons/bold.svg" /></button>
+                  <button><image src="./assets/icons/italic.svg" /></button>
+                  <button><image src="./assets/icons/underline.svg" /></button>
+                  <button><image src="./assets/icons/text-more.svg" /></button>
+
+                  <div class="w-4"></div>
+
+                  <button><image src="./assets/icons/align-left.svg" /></button>
+                  <button>
+                    <image src="./assets/icons/align-center.svg" />
+                  </button>
+                  <button>
+                    <image src="./assets/icons/ordered-list.svg" />
+                  </button>
+                  <button>
+                    <image src="./assets/icons/paragraph-more.svg" />
+                  </button>
+
+                  <div class="w-4"></div>
+
+                  <button>
+                    <image src="./assets/icons/insert-link.svg" />
+                  </button>
+                  <button>
+                    <image src="./assets/icons/insert-image.svg" />
+                  </button>
+                  <button>
+                    <image src="./assets/icons/smile.svg" />
+                  </button>
+                  <button>
+                    <image src="./assets/icons/insert-more.svg" />
+                  </button>
+                </div>
+
+                <div class="flex flex-row flex-grow justify-end">
+                  <button>
+                    <image src="./assets/icons/undo.svg" />
+                  </button>
+                  <button>
+                    <image src="./assets/icons/redo.svg" />
+                  </button>
+                  <button>
+                    <image src="./assets/icons/more.svg" />
+                  </button>
+                </div>
+              </div>
               <textarea placeholder="Placeholder" rows="4"></textarea>
             </div>
+          </div>
+
+          <div class="card p-6 mb-6">
+            <h2 class="font-bold mb-4">History Image</h2>
+            <div class="flex flex-row flex-wrap">
+              <div class="h-[150px] w-[150px] relative">
+                <button
+                  class="absolute right-0 translate-x-1/2 -translate-y-1/2"
+                >
+                  <img src="./assets/icons/close-square.svg" class="h-6 w-6" />
+                </button>
+                <img
+                  src="https://picsum.photos/seed/history/200/150"
+                  class="w-full h-full object-cover rounded-lg cursor-pointer"
+                  @click="modalShow = true"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="flex flex-row justify-end">
+            <button class="btn btn-transparent btn-lg">Reset</button>
+            <button class="btn btn-accent btn-lg">Save</button>
           </div>
         </div>
         <!-- end of content -->
@@ -182,6 +259,37 @@
         </footer>
       </div>
       <!-- end of main content -->
+
+      <!-- image preview -->
+      <div :class="`modal ${modalShow?'show':''}`">
+        <button
+          class="absolute top-0 right-0 mt-11 mr-11"
+          @click="modalShow = false"
+        >
+          <img src="./assets/icons/close-x.svg" />
+        </button>
+        <img
+          src="https://picsum.photos/seed/history/983/983"
+          class="object-contain max-w-[80vh] rounded-lg"
+        />
+      </div>
+      <!-- end of image preview -->
     </main>
   </body>
+
+  <script src="//unpkg.com/alpinejs" defer></script>
+  <script>
+    // this just for demo of preview image
+    document.addEventListener("alpine:init", () => {
+      Alpine.data("history", () => ({
+        modalShow: false,
+        onMount() {
+          // this to lock scroll when image is being previewed
+          this.$watch("modalShow", () => {
+            document.getElementById("app").classList.toggle("overflow-hidden");
+          });
+        },
+      }));
+    });
+  </script>
 </html>

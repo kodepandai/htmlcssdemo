@@ -1,5 +1,5 @@
 .btn {
-  @apply font-semibold h-10 px-6 rounded-md;
+  @apply font-semibold h-10 px-6 rounded-md min-w-[140px];
   &-accent {
     @apply bg-accent text-white;
   }

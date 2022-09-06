@@ -22,3 +22,10 @@ p {
 .card {
   @apply rounded-2xl bg-primary border border-gray-200;
 }
+
+.modal {
+  @apply hidden h-screen w-screen bg-gray-900 bg-opacity-70 z-30 fixed items-center justify-center;
+  &.show {
+    @apply flex;
+  }
+}

@@ -8,6 +8,9 @@ module.exports = {
         secondary: "var(--bg-secondary)",
         tertiary: "var(--bg-tertiary)",
         accent: "rgb(var(--bg-accent)/var(--tw-bg-opacity))",
+        gray: {
+          900: "rgb(var(--bg-gray-900)/var(--tw-bg-opacity))",
+        },
       },
       colors: {
         primary: "var(--c-primary)",
@@ -19,6 +22,9 @@ module.exports = {
           200: "var(--c-gray-200)",
           300: "var(--c-gray-300)",
           800: "var(--c-gray-800)",
+        },
+        red: {
+          DEFAULT: "var(--c-red)",
         },
       },
       fontFamily: {

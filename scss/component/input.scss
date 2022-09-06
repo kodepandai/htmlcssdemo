@@ -15,7 +15,13 @@ input, textarea {
 .textarea {
   @apply rounded-lg border border-gray-200;
   &-toolbar {
-    @apply h-14 bg-gray-200;
+    @apply bg-gray-200 flex flex-row flex-wrap justify-between items-center;
+    button {
+      @apply px-3 h-14;
+      img {
+        @apply h-full w-full object-contain h-6;
+      }
+    }
   }
   textarea {
     @apply w-full bg-gray-50 p-4 rounded-b-lg -mb-2;
