@@ -1,10 +1,29 @@
-input, textarea {
-    &::placeholder {
-      @apply text-gray-300 text-sm;
-    }
-    &:focus-visible {
-      @apply outline-gray-300;
-    }
+input,
+textarea,
+select {
+  &::placeholder {
+    @apply text-gray-300 text-sm;
+  }
+  &:focus-visible {
+    @apply outline-gray-300;
+  }
+}
+select.input-field {
+  @apply appearance-none bg-no-repeat pr-6 text-gray-300;
+  &:focus {
+    @apply text-primary;
+  }
+  background-image: url(./assets/icons/arrow-down-disabled.svg);
+  background-position: calc(100% - 1rem) center;
+}
+.form-data {
+  @apply flex flex-col;
+  label {
+    @apply text-sm mb-1;
+  }
+  small {
+    @apply text-xs text-gray-800 mb-1;
+  }
 }
 .input {
   &-field {
