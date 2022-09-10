@@ -29,3 +29,10 @@ p {
     @apply flex;
   }
 }
+ul.item-circle {
+    list-style-position: outside;
+  li {
+    list-style-type: disc;
+    margin-left:1.4rem;
+  }
+}

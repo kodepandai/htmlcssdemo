@@ -31,7 +31,8 @@ module.exports = {
         sans: "var(--font-sans)",
       },
       fontSize: {
-        title: "32px",
+        title: "var(--size-title)",
+        subtitle: "var(--size-subtitle)"
       },
       boxShadow: {
         DEFAULT: "var(--shadow-default)",
