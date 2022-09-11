@@ -736,13 +736,13 @@ video {
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
-.py-3{
-  padding-top: 0.75rem;
-  padding-bottom: 0.75rem;
-}
 .px-3{
   padding-left: 0.75rem;
   padding-right: 0.75rem;
+}
+.py-3{
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
 }
 .pl-10{
   padding-left: 2.5rem;
@@ -775,29 +775,33 @@ video {
 .text-accent{
   color: var(--c-accent);
 }
+.text-disabled{
+  color: var(--c-disabled);
+}
 .text-gray-800{
   color: var(--c-gray-800);
 }
 :root {
   --tw-bg-opacity: 1;
   /* colors */
-  --bg-primary: #FFFFFF;
-  --bg-secondary: #F9F9F9;
-  --bg-tertiary: #F4F6FF;
+  --bg-primary: #ffffff;
+  --bg-secondary: #f9f9f9;
+  --bg-tertiary: #f4f6ff;
   --bg-accent: 5 44 194;
   --bg-gray-900: 44 44 44;
   --c-primary: #2c2c2c;
   --c-secondary: #828282;
-  --c-accent: #052CC2;
+  --c-accent: #052cc2;
   --c-gray-50: #f9f9f9;
   --c-gray-100: #f5f5f5;
   --c-gray-200: #f1f1f1;
   --c-gray-300: #a1a1a1;
   --c-gray-800: #676767;
   --c-red: #ff0000;
+  --c-disabled: #cccccc;
 
   /* fonts */
-  --font-sans: 'Inter', sans-serif;
+  --font-sans: "Inter", sans-serif;
   --size-title: 2rem;
   --size-subtitle: 1.25rem;
 
@@ -824,6 +828,48 @@ video {
 .btn.btn-lg{
   height: 3.5rem;
 }
+.calendar{
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+.calendar-day > div{
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+.calendar-date > div{
+  position: relative;
+}
+@media (min-width: 768px) {
+.calendar-date > div{
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    border-width: 1px;
+    padding-bottom: 60%;
+  }
+.calendar-date > div > span{
+    position: absolute;
+    padding: 0.75rem;
+  }
+.calendar-event{
+    position: absolute;
+    bottom: 0.5rem;
+    right: 0.5rem;
+    display: flex;
+    height: 25px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 0.25rem;
+    background-color: var(--bg-tertiary);
+    padding: 0.5rem;
+    font-size: 10px;
+    color: var(--c-accent);
+      width: calc(100% - 16px);
+  }
+      }
 .dropdown{
   position: absolute;
   right: 0px;
@@ -1060,9 +1106,9 @@ p {
   display: flex;
 }
 ul.item-circle {
-    list-style-position: outside;
+  list-style-position: outside;
 }
 ul.item-circle li {
     list-style-type: disc;
-    margin-left:1.4rem;
+    margin-left: 1.4rem;
   }

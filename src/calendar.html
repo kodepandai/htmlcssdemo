@@ -103,9 +103,12 @@
             </a>
           </li>
           <li>
-            <a href="./calendar.html">
+            <a href="#" class="active">
               <div>
-                <img src="./assets/icons/calendar.svg" class="mr-3" />Calendar
+                <img
+                  src="./assets/icons/calendar-light.svg"
+                  class="mr-3"
+                />Calendar
               </div>
             </a>
           </li>
@@ -137,7 +140,50 @@
       <!-- main content -->
       <div class="flex flex-col pl-[260px] w-full mt-[83px] justify-between">
         <!-- content -->
-        <div class="p-6 text-primary"></div>
+        <div class="p-6 text-primary">
+          <div class="card p-10">
+            <h1 class="text-title font-bold mb-6">Calendar</h1>
+
+            <!-- calendar card -->
+            <div class="flex flex-row justify-between mb-6">
+              <h2 class="text-subtitle font-bold">August 2022</h2>
+              <div class="flex flex-row">
+                <button><img src="./assets/icons/arrow-left.svg" /></button>
+                <button class="text-sm px-3">Today</button>
+                <button><img src="./assets/icons/arrow-right.svg" /></button>
+              </div>
+            </div>
+            <div class="calendar calendar-day">
+              <div>Sun</div>
+              <div>Mon</div>
+              <div>Tue</div>
+              <div>Wed</div>
+              <div>Thu</div>
+              <div>Fri</div>
+              <div>Sat</div>
+            </div>
+
+            <div
+              class="calendar calendar-date"
+              x-data="calendar"
+              x-init="onMount()"
+            >
+              <!-- in react, use {dates.map(...)} and remove the <template> tag -->
+              <template x-for="date in dates">
+                <div :class="date.enable?'cursor-pointer':'text-disabled'">
+                  <span x-text="date.date"></span>
+                  <template x-if="date.event">
+                    <div class="calendar-event">
+                      <span>Event Name</span>
+                      <span>10:00AM</span>
+                    </div>
+                  </template>
+                </div>
+              </template>
+            </div>
+            <!-- end of calendar card -->
+          </div>
+        </div>
         <!-- end of content -->
 
         <footer
@@ -152,5 +198,52 @@
       </div>
       <!-- end of main content -->
     </main>
+
+    <script src="https://unpkg.com/alpinejs" defer></script>
+    <script>
+      // this just for demo of calendar. Change the implementation on reactjs instead
+      document.addEventListener("alpine:init", () => {
+        Alpine.data("calendar", () => ({
+          dates: [],
+          onMount() {
+            // this just simulate calendar days
+            let dummyDates = [...Array(32).keys()].map((x) => {
+              let data = {
+                enable: true,
+              };
+              if (x == 0) {
+                data.date = 31;
+                data.enable = false;
+                return data;
+              }
+              if (x == 12) {
+                data.event = true;
+              }
+              data.date = x;
+              return data;
+            });
+            //adding next month days
+            dummyDates = [
+              ...dummyDates,
+              {
+                date: 1,
+                isNextMonth: true,
+                enable: false,
+              },
+              {
+                date: 2,
+                enable: false,
+              },
+              {
+                date: 3,
+                enable: false,
+              },
+            ];
+
+            this.dates = dummyDates;
+          },
+        }));
+      });
+    </script>
   </body>
 </html>

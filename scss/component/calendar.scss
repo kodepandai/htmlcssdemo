@@ -1,0 +1,28 @@
+.calendar {
+  @apply grid grid-cols-7 text-sm;
+  &-day {
+    > div {
+      @apply text-center mb-2;
+    }
+  }
+
+  &-date {
+    > div {
+      @apply relative;
+      @media screen(md) {
+        @apply border w-full flex justify-end pb-[60%];
+      }
+      > span {
+        @media screen(md) {
+          @apply p-3 absolute;
+        }
+      }
+    }
+  }
+  &-event {
+    @media screen(md) {
+      @apply flex flex-row justify-between h-[25px] rounded bg-tertiary text-[10px] text-accent  p-2 items-center absolute bottom-2 right-2;
+      width: calc(100% - 16px);
+    }
+  }
+}

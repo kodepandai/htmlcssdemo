@@ -26,13 +26,14 @@ module.exports = {
         red: {
           DEFAULT: "var(--c-red)",
         },
+        disabled: "var(--c-disabled)",
       },
       fontFamily: {
         sans: "var(--font-sans)",
       },
       fontSize: {
         title: "var(--size-title)",
-        subtitle: "var(--size-subtitle)"
+        subtitle: "var(--size-subtitle)",
       },
       boxShadow: {
         DEFAULT: "var(--shadow-default)",

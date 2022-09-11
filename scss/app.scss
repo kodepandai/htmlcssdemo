@@ -2,6 +2,7 @@
 
 /* import components */
 @import "component/button.scss";
+@import "component/calendar.scss";
 @import "component/dropdown.scss";
 @import "component/input.scss";
 @import "component/side-menu.scss";
@@ -30,9 +31,9 @@ p {
   }
 }
 ul.item-circle {
-    list-style-position: outside;
+  list-style-position: outside;
   li {
     list-style-type: disc;
-    margin-left:1.4rem;
+    margin-left: 1.4rem;
   }
 }
