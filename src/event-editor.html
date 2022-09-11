@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./app.min.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main class="bg-secondary min-h-screen w-full flex flex-row font-sans">
+      <!-- top bar -->
+      <div
+        class="flex justify-between px-6 h-[83px] items-center fixed bg-secondary w-full left-0 z-10"
+      >
+        <div></div>
+        <div class="flex flex-row">
+          <span class="mr-4"> Sign in as test@test.com </span>
+          <img src="./assets/icons/arrow-down.svg" />
+        </div>
+      </div>
+      <!-- end of top bar -->
+      <!-- sidebar -->
+      <aside class="bg-primary w-[260px] h-screen fixed z-20">
+        <!-- logo -->
+        <a class="h-[83px] px-6 items-center flex" href="./index.html">
+          <img
+            src="./assets/logo.png"
+            width="112"
+            class="object-contain"
+            alt="noble logo"
+          />
+        </a>
+        <!-- end of logo -->
+
+        <!-- side menu -->
+        <ul class="side-menu">
+          <li>
+            <a href="./instruction.html">
+              <div>
+                <img src="./assets/icons/paper.svg" class="mr-3" />Instructions
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="./organization.html">
+              <div>
+                <img src="./assets/icons/home.svg" class="mr-3" />Organization
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <div>
+                <img src="./assets/icons/wallet.svg" class="mr-3" />Fundraising
+              </div>
+              <img src="./assets/icons/arrow-down.svg" />
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <div>
+                <img src="./assets/icons/document.svg" class="mr-3" />About
+              </div>
+              <img src="./assets/icons/arrow-down.svg" />
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <div><img src="./assets/icons/user.svg" class="mr-3" />Team</div>
+              <img src="./assets/icons/arrow-down.svg" />
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <div>
+                <img src="./assets/icons/activity.svg" class="mr-3" />Activities
+              </div>
+              <img src="./assets/icons/arrow-down.svg" />
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <div><img src="./assets/icons/plus.svg" class="mr-3" />Add</div>
+              <img src="./assets/icons/arrow-down.svg" />
+            </a>
+          </li>
+          <li>
+            <a href="./calendar.html" class="active">
+              <div>
+                <img
+                  src="./assets/icons/calendar-light.svg"
+                  class="mr-3"
+                />Calendar
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <div>
+                <img src="./assets/icons/category.svg" class="mr-3" />More
+              </div>
+              <img src="./assets/icons/arrow-down.svg" />
+            </a>
+          </li>
+        </ul>
+        <!-- end of side menu -->
+
+        <!-- Questions us card -->
+        <div class="p-6 absolute bottom-0">
+          <div class="bg-tertiary rounded-2xl p-4">
+            <div class="font-bold">Questions?</div>
+            <div class="text-secondary text-sm">
+              Don’t hesitate to contact us. We will help you
+            </div>
+            <button class="btn btn-accent w-full mt-6">Email Us</button>
+          </div>
+        </div>
+        <!-- end of Questions us card -->
+      </aside>
+      <!-- end of sidebar -->
+
+      <!-- main content -->
+      <div class="flex flex-col pl-[260px] w-full mt-[83px] justify-between">
+        <!-- content -->
+        <div class="p-6 text-primary w-4/5 mx-auto mt-14">
+          <div class="flex flex-row mb-6">
+            <button>
+              <img src="./assets/icons/arrow-left.svg" />
+            </button>
+            <h1 class="text-title font-bold ml-5">Event Editor</h1>
+          </div>
+
+          <div class="card p-6 mb-6">
+            <h2 class="font-bold mb-4">Details</h2>
+
+            <div class="flex flex-row flex-wrap -mx-3 mb-6">
+              <div class="form-data w-full px-3">
+                <label>Address</label>
+                <input
+                  placeholder="Placeholder"
+                  name="title"
+                  class="input-field w-full"
+                  value="2000 Bunker Rd Fort Cronkhite"
+                />
+              </div>
+            </div>
+
+            <div class="flex flex-row flex-wrap -mx-3 mb-6">
+              <div class="form-data w-1/4 px-3">
+                <label>Start Date</label>
+                <input
+                  placeholder="Select Date"
+                  name="title"
+                  class="input-field w-full input-date"
+                />
+              </div>
+              <div class="form-data w-1/4 px-3">
+                <label>Time</label>
+                <input
+                  placeholder="Select Time"
+                  name="title"
+                  class="input-field w-full input-time"
+                />
+              </div>
+              <div class="form-data w-1/4 px-3">
+                <label>End Date</label>
+                <input
+                  placeholder="Select Date"
+                  name="title"
+                  class="input-field w-full input-date"
+                />
+              </div>
+              <div class="form-data w-1/4 px-3">
+                <label>Time</label>
+                <input
+                  placeholder="Select Time"
+                  name="title"
+                  class="input-field w-full input-time"
+                />
+              </div>
+            </div>
+
+            <div class="flex flex-row flex-wrap -mx-3 mb-6">
+              <div class="form-data w-1/4 px-3">
+                <label>Type</label>
+                <select name="title" class="input-field w-full">
+                  <option value="">Select Type</option>
+                  <option value="1">Type 1</option>
+                  <option value="2">Type 2</option>
+                  <option value="3">Type 3</option>
+                </select>
+              </div>
+
+              <div class="form-data w-3/4 px-3">
+                <label>Physical Location</label>
+                <input
+                  placeholder="Placeholder"
+                  name="title"
+                  class="input-field w-full"
+                />
+              </div>
+            </div>
+
+            <div class="flex flex-row flex-wrap -mx-3 mb-6">
+              <div class="form-data w-1/4 px-3">
+                <label>Status</label>
+                <select name="title" class="input-field w-full">
+                  <option value="">Select Status</option>
+                  <option value="1">Status 1</option>
+                  <option value="2">Status 2</option>
+                  <option value="3">Status 3</option>
+                </select>
+              </div>
+
+              <div class="form-data w-3/4 px-3">
+                <label>Online Location</label>
+                <input
+                  placeholder="Placeholder"
+                  name="title"
+                  class="input-field w-full"
+                />
+              </div>
+            </div>
+            <div class="flex flex-row flex-wrap -mx-3 mb-6">
+              <div class="form-data w-full px-3">
+                <label>Summary</label>
+                <input
+                  placeholder="Placeholder"
+                  name="title"
+                  class="input-field w-full"
+                />
+              </div>
+            </div>
+
+            <div class="flex flex-row flex-wrap -mx-3">
+              <div class="form-data w-full px-3">
+                <label>Description</label>
+                <textarea
+                  class="input-field"
+                  placeholder="Placeholder"
+                  rows="3"
+                ></textarea>
+              </div>
+            </div>
+          </div>
+
+          <div class="card p-6 mb-6">
+            <h2 class="font-bold mb-4">Attachments</h2>
+            <div class="uploader">
+              <div class="max-w-lg">
+                You may submit up to 10 attachments per event. Each file must be
+                no larger than 15Mb. Only document and image files will be
+                accepted (.doc, .docx, .pdf, .csv, .rtf, .txt, .jpeg, .png,
+                .ico, .webp, .gif
+              </div>
+              <div>Drag or click to upload</div>
+            </div>
+          </div>
+        </div>
+        <!-- end of content -->
+
+        <footer
+          class="py-4 px-6 text-sm text-primary justify-between flex flex-row"
+        >
+          <div>© 2022 Noble. All rights reserved.</div>
+          <div>
+            <a href="#" class="text-accent mr-8">Terms of Use</a>
+            <a href="#" class="text-accent">Privacy Policy</a>
+          </div>
+        </footer>
+      </div>
+      <!-- end of main content -->
+    </main>
+  </body>
+</html>

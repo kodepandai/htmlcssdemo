@@ -13,7 +13,7 @@ select.input-field {
   &:focus {
     @apply text-primary;
   }
-  background-image: url(./assets/icons/arrow-down-disabled.svg);
+  background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M19 8.5L12 15.5L5 8.5' stroke='%23CCCCCC' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
   background-position: calc(100% - 1rem) center;
 }
 .form-data {
@@ -28,6 +28,16 @@ select.input-field {
 .input {
   &-field {
     @apply rounded-lg bg-gray-50 h-12 border border-gray-200 px-4;
+  }
+  &-date {
+    @apply bg-no-repeat pr-12;
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3.09277 9.40426H20.9167' stroke='%23CCCCCC' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M16.442 13.3097H16.4512' stroke='%23CCCCCC' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M12.0045 13.3097H12.0137' stroke='%23CCCCCC' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M7.55818 13.3097H7.56744' stroke='%23CCCCCC' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M16.442 17.1962H16.4512' stroke='%23CCCCCC' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M12.0045 17.1962H12.0137' stroke='%23CCCCCC' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M7.55818 17.1962H7.56744' stroke='%23CCCCCC' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M16.0433 2V5.29078' stroke='%23CCCCCC' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M7.96515 2V5.29078' stroke='%23CCCCCC' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M16.2383 3.57919H7.77096C4.83427 3.57919 3 5.21513 3 8.22222V17.2719C3 20.3262 4.83427 22 7.77096 22H16.229C19.175 22 21 20.3546 21 17.3475V8.22222C21.0092 5.21513 19.1842 3.57919 16.2383 3.57919Z' stroke='%23CCCCCC' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    background-position: calc(100% - 1rem) center;
+  }
+  &-time {
+    @apply bg-no-repeat pr-12;
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M21.25 12.0005C21.25 17.1095 17.109 21.2505 12 21.2505C6.891 21.2505 2.75 17.1095 2.75 12.0005C2.75 6.8915 6.891 2.7505 12 2.7505C17.109 2.7505 21.25 6.8915 21.25 12.0005Z' stroke='%23CCCCCC' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M15.4311 14.9429L11.6611 12.6939V7.8469' stroke='%23CCCCCC' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    background-position: calc(100% - 1rem) center;
   }
 }
 
@@ -45,6 +55,9 @@ select.input-field {
   textarea {
     @apply w-full bg-gray-50 p-4 rounded-b-lg -mb-2;
   }
+}
+textarea.input-field {
+  @apply h-auto py-3;
 }
 
 .uploader {

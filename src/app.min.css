@@ -583,6 +583,9 @@ video {
 .mt-14{
   margin-top: 3.5rem;
 }
+.ml-5{
+  margin-left: 1.25rem;
+}
 .mb-4{
   margin-bottom: 1rem;
 }
@@ -643,6 +646,12 @@ video {
 .w-4\/5{
   width: 80%;
 }
+.w-1\/4{
+  width: 25%;
+}
+.w-3\/4{
+  width: 75%;
+}
 .w-4{
   width: 1rem;
 }
@@ -654,9 +663,6 @@ video {
 }
 .w-1\/2{
   width: 50%;
-}
-.w-1\/4{
-  width: 25%;
 }
 .min-w-\[150px\]{
   min-width: 150px;
@@ -946,7 +952,7 @@ select.input-field:focus{
   color: var(--c-primary);
 }
 select.input-field{
-  background-image: url(./assets/icons/arrow-down-disabled.svg);
+  background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M19 8.5L12 15.5L5 8.5' stroke='%23CCCCCC' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
   background-position: calc(100% - 1rem) center;
 }
 .form-data{
@@ -972,6 +978,18 @@ select.input-field{
   background-color: Var(--c-gray-50);
   padding-left: 1rem;
   padding-right: 1rem;
+}
+.input-date{
+  background-repeat: no-repeat;
+  padding-right: 3rem;
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3.09277 9.40426H20.9167' stroke='%23CCCCCC' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M16.442 13.3097H16.4512' stroke='%23CCCCCC' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M12.0045 13.3097H12.0137' stroke='%23CCCCCC' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M7.55818 13.3097H7.56744' stroke='%23CCCCCC' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M16.442 17.1962H16.4512' stroke='%23CCCCCC' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M12.0045 17.1962H12.0137' stroke='%23CCCCCC' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M7.55818 17.1962H7.56744' stroke='%23CCCCCC' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M16.0433 2V5.29078' stroke='%23CCCCCC' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M7.96515 2V5.29078' stroke='%23CCCCCC' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M16.2383 3.57919H7.77096C4.83427 3.57919 3 5.21513 3 8.22222V17.2719C3 20.3262 4.83427 22 7.77096 22H16.229C19.175 22 21 20.3546 21 17.3475V8.22222C21.0092 5.21513 19.1842 3.57919 16.2383 3.57919Z' stroke='%23CCCCCC' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    background-position: calc(100% - 1rem) center;
+}
+.input-time{
+  background-repeat: no-repeat;
+  padding-right: 3rem;
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M21.25 12.0005C21.25 17.1095 17.109 21.2505 12 21.2505C6.891 21.2505 2.75 17.1095 2.75 12.0005C2.75 6.8915 6.891 2.7505 12 2.7505C17.109 2.7505 21.25 6.8915 21.25 12.0005Z' stroke='%23CCCCCC' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M15.4311 14.9429L11.6611 12.6939V7.8469' stroke='%23CCCCCC' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    background-position: calc(100% - 1rem) center;
 }
 .textarea{
   border-radius: 0.5rem;
@@ -1005,6 +1023,11 @@ select.input-field{
   border-bottom-left-radius: 0.5rem;
   background-color: Var(--c-gray-50);
   padding: 1rem;
+}
+textarea.input-field{
+  height: auto;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
 }
 .uploader{
   display: flex;
