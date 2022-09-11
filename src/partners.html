@@ -75,9 +75,11 @@
             </ul>
           </li>
           <li>
-            <a href="#">
-              <div><img src="./assets/icons/user.svg" class="mr-3" />Team</div>
-              <img src="./assets/icons/arrow-down.svg" />
+            <a href="#" class="active">
+              <div>
+                <img src="./assets/icons/user-light.svg" class="mr-3" />Team
+              </div>
+              <img src="./assets/icons/arrow-up.svg" />
             </a>
             <ul class="pl-10">
               <li>
@@ -86,7 +88,7 @@
               <li>
                 <a href="./board-of-directors.html">Board of Directors</a>
               </li>
-              <li>
+              <li class="active">
                 <a href="./partners.html">Partners</a>
               </li>
             </ul>
@@ -140,7 +142,54 @@
       <!-- main content -->
       <div class="flex flex-col pl-[260px] w-full mt-[83px] justify-between">
         <!-- content -->
-        <div class="p-6 text-primary"></div>
+        <div class="p-6 text-primary">
+          <div class="card p-10 bg-primary">
+            <h1 class="text-title font-bold mb-4">Partners</h1>
+
+            <!-- uploader -->
+            <div class="uploader mb-8">
+              <div class="max-w-lg">
+                You may submit up to 10 attachments per event. Each file must be
+                no larger than 15Mb. Only document and image files will be
+                accepted (.doc, .docx, .pdf, .csv, .rtf, .txt, .jpeg, .png,
+                .ico, .webp, .gif
+              </div>
+              <div>Drag or click to upload</div>
+            </div>
+            <!-- end of uploader -->
+
+            <div class="flex flex-wrap mb-4 items-center">
+              <h2 class="text-subtitle font-bold">Upload</h2>
+              <span class="text-sm text-gray-800 ml-4">10/50 files</span>
+            </div>
+
+            <div
+              class="grid md:grid-cols-4 lg:grid-cols-6 grid-cols-2 gap-8"
+              x-data="{}"
+            >
+              <!-- thumbnail upload, repeat 10 times -->
+              <template x-for="(image, index) in Array.from({length:10})">
+                <div class="w-full pb-[100%] relative">
+                  <div class="absolute inset-0">
+                    <button
+                      class="absolute right-0 translate-x-1/2 -translate-y-1/2"
+                    >
+                      <img
+                        src="./assets/icons/close-square.svg"
+                        class="h-6 w-6"
+                      />
+                    </button>
+                    <img
+                      :src="`https://picsum.photos/seed/history${index+1}/200/150`"
+                      class="w-full h-full object-cover rounded-lg cursor-pointer"
+                    />
+                  </div>
+                </div>
+              </template>
+              <!-- end of thumbnail upload -->
+            </div>
+          </div>
+        </div>
         <!-- end of content -->
 
         <footer
@@ -156,4 +205,5 @@
       <!-- end of main content -->
     </main>
   </body>
+  <script src="https://unpkg.com/alpinejs" defer></script>
 </html>

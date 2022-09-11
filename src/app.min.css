@@ -517,6 +517,12 @@ video {
 .relative{
   position: relative;
 }
+.inset-0{
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+}
 .left-0{
   left: 0px;
 }
@@ -592,11 +598,17 @@ video {
 .mt-4{
   margin-top: 1rem;
 }
+.ml-4{
+  margin-left: 1rem;
+}
 .flex{
   display: flex;
 }
 .table{
   display: table;
+}
+.grid{
+  display: grid;
 }
 .h-\[83px\]{
   height: 83px;
@@ -655,6 +667,9 @@ video {
 .max-w-\[80vh\]{
   max-width: 80vh;
 }
+.max-w-lg{
+  max-width: 32rem;
+}
 .flex-shrink-0{
   flex-shrink: 0;
 }
@@ -671,6 +686,12 @@ video {
 }
 .cursor-pointer{
   cursor: pointer;
+}
+.grid-cols-6{
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+}
+.grid-cols-2{
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 .flex-row{
   flex-direction: row;
@@ -689,6 +710,12 @@ video {
 }
 .justify-between{
   justify-content: space-between;
+}
+.gap-4{
+  gap: 1rem;
+}
+.gap-8{
+  gap: 2rem;
 }
 .overflow-hidden{
   overflow: hidden;
@@ -749,6 +776,9 @@ video {
 }
 .pl-\[260px\]{
   padding-left: 260px;
+}
+.pb-\[100\%\]{
+  padding-bottom: 100%;
 }
 .font-sans{
   font-family: var(--font-sans);
@@ -982,6 +1012,22 @@ select.input-field{
   background-color: Var(--c-gray-50);
   padding: 1rem;
 }
+.uploader{
+  display: flex;
+  height: 175px;
+  cursor: pointer;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+  text-align: center;
+  font-size: 0.875rem;
+  line-height: 1rem;
+  color: var(--c-gray-800);
+  background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='8' ry='8' stroke='%23CCCCCCFF' stroke-width='2' stroke-dasharray='8%2c 8' stroke-dashoffset='7' stroke-linecap='square'/%3e%3c/svg%3e");
+  border-radius: 8px;
+}
 .side-menu{
   display: flex;
   flex-direction: column;
@@ -1112,3 +1158,25 @@ ul.item-circle li {
     list-style-type: disc;
     margin-left: 1.4rem;
   }
+@media (min-width: 640px){
+
+  .sm\:grid-cols-4{
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+@media (min-width: 768px){
+
+  .md\:grid-cols-6{
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+  }
+
+  .md\:grid-cols-4{
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+@media (min-width: 1024px){
+
+  .lg\:grid-cols-6{
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+  }
+}
