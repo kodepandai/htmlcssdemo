@@ -687,9 +687,6 @@ video {
 .cursor-pointer{
   cursor: pointer;
 }
-.grid-cols-6{
-  grid-template-columns: repeat(6, minmax(0, 1fr));
-}
 .grid-cols-2{
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
@@ -710,9 +707,6 @@ video {
 }
 .justify-between{
   justify-content: space-between;
-}
-.gap-4{
-  gap: 1rem;
 }
 .gap-8{
   gap: 2rem;
@@ -1019,6 +1013,7 @@ select.input-field{
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+  background-color: Var(--c-gray-50);
   padding-top: 2.5rem;
   padding-bottom: 2.5rem;
   text-align: center;
@@ -1158,17 +1153,7 @@ ul.item-circle li {
     list-style-type: disc;
     margin-left: 1.4rem;
   }
-@media (min-width: 640px){
-
-  .sm\:grid-cols-4{
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-  }
-}
 @media (min-width: 768px){
-
-  .md\:grid-cols-6{
-    grid-template-columns: repeat(6, minmax(0, 1fr));
-  }
 
   .md\:grid-cols-4{
     grid-template-columns: repeat(4, minmax(0, 1fr));
