@@ -9,7 +9,21 @@
 @import "component/table.scss";
 @import "component/toggle.scss";
 
-aside {
+.topbar {
+  @apply flex justify-between h-[64px] items-center fixed bg-primary w-full left-0 z-30;
+  @media screen(md) {
+    @apply h-[83px] bg-secondary;
+  }
+}
+.sidebar {
+  @apply bg-primary w-[260px] h-screen fixed hidden z-20 pt-[64px];
+  @media screen(md) {
+    @apply pt-[83px] block;
+  }
+  &.show {
+    @apply block;
+  }
+
   > ul {
     padding-bottom: 200px;
     max-height: calc(100vh - 83px);
@@ -35,5 +49,12 @@ ul.item-circle {
   li {
     list-style-type: disc;
     margin-left: 1.4rem;
+  }
+}
+
+.content-wrapper {
+  @apply flex flex-col w-full mt-[64px] justify-between;
+  @media screen(md) {
+    @apply pl-[260px] mt-[83px];
   }
 }

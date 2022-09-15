@@ -14,31 +14,30 @@
   <body id="app">
     <main
       class="bg-secondary min-h-screen w-full flex flex-row font-sans"
-      x-data="history"
+      x-data="app"
       x-init="onMount()"
     >
       <!-- top bar -->
-      <div
-        class="flex justify-between px-6 h-[83px] items-center fixed bg-secondary w-full left-0 z-10"
-      >
-        <div></div>
-        <div class="flex flex-row relative py-3">
-          <span class="mr-4"> Sign in as test@test.com </span>
-          <img src="./assets/icons/arrow-down.svg" />
+      <div class="topbar">
+        <!-- toggle menu mobile only -->
+        <button class="md:hidden block px-6" @click="()=>menuOpen=!menuOpen">
+          <img
+            src="./assets/icons/close-x-accent.svg"
+            :class="menuOpen?'':'hidden'"
+          />
+          <img
+            src="./assets/icons/menu.svg"
+            class=""
+            :class="menuOpen?'hidden':''"
+          />
+        </button>
+        <!-- end of toggle menu mobile only -->
 
-          <div class="dropdown">
-            <button class="dropdown-item">
-              <img src="./assets/icons/logout.svg" />
-              <span class="ml-2">Log Out</span>
-            </button>
-          </div>
-        </div>
-      </div>
-      <!-- end of top bar -->
-      <!-- sidebar -->
-      <aside class="bg-primary w-[260px] h-screen fixed z-20">
         <!-- logo -->
-        <a class="h-[83px] px-6 items-center flex" href="./index.html">
+        <a
+          class="bg-primary md:w-[260px] h-full flex items-center px-6"
+          href="./index.html"
+        >
           <img
             src="./assets/logo.png"
             width="112"
@@ -47,7 +46,29 @@
           />
         </a>
         <!-- end of logo -->
+        <div class="flex flex-row px-6">
+          <div class="flex flex-row py-3 relative">
+            <span class="mr-4 hidden md:block"> Sign in as test@test.com </span>
+            <button>
+              <img
+                src="./assets/icons/arrow-down.svg"
+                class="hidden md:block"
+              />
+              <img src="./assets/icons/profile.svg" class="md:hidden" />
+            </button>
+            <div class="dropdown">
+              <button class="dropdown-item">
+                <img src="./assets/icons/logout.svg" />
+                <span class="ml-2">Log Out</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end of top bar -->
 
+      <!-- sidebar -->
+      <aside :class="`sidebar ${menuOpen?'show':''}`">
         <!-- side menu -->
         <ul class="side-menu">
           <li>
@@ -141,7 +162,7 @@
       <!-- end of sidebar -->
 
       <!-- main content -->
-      <div class="flex flex-col pl-[260px] w-full mt-[83px] justify-between">
+      <div class="content-wrapper">
         <!-- content -->
         <div class="p-6 text-primary w-4/5 mx-auto mt-14">
           <div class="flex flex-row justify-between">
@@ -281,7 +302,8 @@
   <script>
     // this just for demo of preview image
     document.addEventListener("alpine:init", () => {
-      Alpine.data("history", () => ({
+      Alpine.data("app", () => ({
+        menuOpen: false,
         modalShow: false,
         onMount() {
           // this to lock scroll when image is being previewed
