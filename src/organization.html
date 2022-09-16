@@ -152,16 +152,16 @@
       <!-- main content -->
       <div class="content-wrapper">
         <!-- content -->
-        <div class="p-6 text-primary w-4/5 mx-auto mt-14">
+        <div class="md:p-6 p-4 text-primary md:w-4/5 mx-auto md:mt-14 mt-7">
           <div class="flex flex-col">
-            <h1 class="text-title font-bold">Organization</h1>
+            <h1 class="text-title font-bold mb-4 md:mb-6">Organization</h1>
 
             <!-- biodata card -->
-            <div class="card p-6 mb-6">
+            <div class="card md:p-6 md:mb-6 p-4 mb-4">
               <h2 class="font-bold mb-4">Biodata</h2>
 
               <div class="flex flex-row flex-wrap -mx-3">
-                <div class="form-data w-1/2 px-3">
+                <div class="form-data md:w-1/2 px-3 mb-4 md:mb-0">
                   <label>Nonprofit Name</label>
                   <small>Enter name of nonprofit</small>
                   <input
@@ -171,7 +171,7 @@
                   />
                 </div>
 
-                <div class="form-data w-1/2 px-3">
+                <div class="form-data md:w-1/2 px-3">
                   <label>EIN</label>
                   <small>IRS-issued EIN</small>
                   <input
@@ -185,7 +185,7 @@
             <!-- end of biodata card -->
 
             <!-- address card -->
-            <div class="card p-6 mb-6">
+            <div class="card md:p-6 md:mb-6 p-4 mb-4">
               <h2 class="font-bold mb-4">Address</h2>
 
               <div class="flex flex-row flex-wrap -mx-3">
@@ -200,7 +200,7 @@
                   />
                 </div>
 
-                <div class="form-data px-3 w-1/2">
+                <div class="form-data px-3 md:w-1/2 md:mb-0 mb-4">
                   <input
                     placeholder="Placeholder"
                     name="title"
@@ -208,7 +208,7 @@
                     value="Sausalito"
                   />
                 </div>
-                <div class="form-data px-3 w-1/4">
+                <div class="form-data px-3 md:w-1/4 w-1/2">
                   <select class="input-field">
                     <option value="" selected class="placeholder">
                       Country
@@ -218,7 +218,7 @@
                     <option value="2">Country C</option>
                   </select>
                 </div>
-                <div class="form-data px-3 w-1/4">
+                <div class="form-data px-3 md:w-1/4 w-1/2">
                   <input
                     placeholder="Zip Code"
                     name="title"
@@ -230,11 +230,11 @@
             <!-- end of address card -->
 
             <!-- contact card -->
-            <div class="card p-6 mb-6">
+            <div class="card md:p-6 md:mb-6 p-4 mb-4">
               <h2 class="font-bold mb-4">Contact</h2>
 
               <div class="flex flex-row flex-wrap -mx-3">
-                <div class="form-data w-1/2 px-3">
+                <div class="form-data md:w-1/2 px-3 mb-4 md:mb-0">
                   <label>Email</label>
                   <small>Enter name of nonprofit</small>
                   <input
@@ -244,7 +244,7 @@
                   />
                 </div>
 
-                <div class="form-data w-1/2 px-3">
+                <div class="form-data md:w-1/2 px-3">
                   <label>Phone Number</label>
                   <small>Enter phone to display on website</small>
                   <input
@@ -256,9 +256,11 @@
               </div>
             </div>
             <!-- end of contact card -->
-            <div class="flex flex-row justify-end mt-4">
+            <div class="flex md:flex-row flex-col justify-end mt-4">
+              <button class="btn btn-accent btn-lg md:order-last mb-4">
+                Save
+              </button>
               <button class="btn btn-transparent btn-lg">Reset</button>
-              <button class="btn btn-accent btn-lg">Save</button>
             </div>
           </div>
         </div>

@@ -7,6 +7,9 @@
     @apply text-primary;
   }
   &.btn-lg {
-    @apply h-14;
+    @apply h-12;
+    @media screen(md) {
+      @apply h-14;
+    }
   }
 }

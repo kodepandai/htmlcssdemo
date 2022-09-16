@@ -580,11 +580,14 @@ video {
 .mr-11{
   margin-right: 2.75rem;
 }
-.mb-8{
-  margin-bottom: 2rem;
+.mt-7{
+  margin-top: 1.75rem;
 }
 .mt-4{
   margin-top: 1rem;
+}
+.mb-8{
+  margin-bottom: 2rem;
 }
 .ml-4{
   margin-left: 1rem;
@@ -807,6 +810,8 @@ video {
 
   /* fonts */
   --font-sans: "Inter", sans-serif;
+  --size-title: 1.25rem;
+  --size-subtitle: 1rem;
 
   /* shadow */
 }
@@ -817,8 +822,6 @@ video {
 }
   }
 :root{
-  --size-title: 1.25rem;
-  --size-subtitle: 1rem;
   --shadow-default: 0px 8px 16px 0px #00000;
 }
 /* import components */
@@ -839,8 +842,13 @@ video {
   color: var(--c-primary);
 }
 .btn.btn-lg{
-  height: 3.5rem;
+  height: 3rem;
 }
+@media (min-width: 768px) {
+.btn.btn-lg{
+    height: 3.5rem;
+  }
+    }
 .calendar{
   display: grid;
   grid-template-columns: repeat(7, minmax(0, 1fr));
@@ -1242,8 +1250,20 @@ ul.item-circle li {
     flex-direction: row;
     justify-content: space-between;
   }
+.md\:order-last{
+    order: 9999;
+  }
 .md\:mb-8{
     margin-bottom: 2rem;
+  }
+.md\:mt-14{
+    margin-top: 3.5rem;
+  }
+.md\:mb-6{
+    margin-bottom: 1.5rem;
+  }
+.md\:mb-0{
+    margin-bottom: 0px;
   }
 .md\:block{
     display: block;
@@ -1254,8 +1274,20 @@ ul.item-circle li {
 .md\:w-\[260px\]{
     width: 260px;
   }
+.md\:w-4\/5{
+    width: 80%;
+  }
+.md\:w-1\/2{
+    width: 50%;
+  }
+.md\:w-1\/4{
+    width: 25%;
+  }
 .md\:grid-cols-4{
     grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+.md\:flex-row{
+    flex-direction: row;
   }
 .md\:p-6{
     padding: 1.5rem;
