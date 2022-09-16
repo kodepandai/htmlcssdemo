@@ -1,9 +1,18 @@
 .toggle {
-  @apply bg-accent bg-opacity-20 w-12 h-6 mr-2 rounded-full flex items-center relative;
-  &.active > div {
-    @apply right-0 left-auto;
+  @apply bg-disabled bg-opacity-20 w-12 h-6 mr-2 rounded-full flex items-center relative;
+  &.active {
+    @apply bg-accent;
+    & > div {
+      @apply right-0 left-auto bg-accent;
+    }
   }
   > div {
-    @apply bg-accent rounded-full h-5 w-5 absolute left-0 bg-opacity-100;
+    @apply bg-gray-800 rounded-full h-5 w-5 absolute left-0 bg-opacity-100;
+  }
+  & ~ label {
+    @apply text-xs self-center;
+    @media screen(md) {
+      @apply text-sm;
+    }
   }
 }

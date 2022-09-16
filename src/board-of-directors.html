@@ -14,7 +14,7 @@
   <body>
     <main
       class="bg-secondary min-h-screen w-full flex flex-row font-sans"
-      x-data="{menuOpen: false}"
+      x-data="app"
     >
       <!-- top bar -->
       <div class="topbar">
@@ -161,13 +161,13 @@
       <!-- main content -->
       <div class="content-wrapper">
         <!-- content -->
-        <div class="p-6 text-primary">
+        <div class="md:p-6 p-4 text-primary">
           <!-- content card -->
-          <div class="bg-primary rounded-2xl w-full p-10">
+          <div class="bg-primary rounded-2xl w-full md:p-10 p-6">
             <!-- content header -->
             <div class="flex flex-row justify-between mb-6">
               <h1 class="text-title font-bold">Board of Directors</h1>
-              <div class="flex-row flex items-center">
+              <div class="flex-row md:flex items-center hidden">
                 <div class="flex-row flex mx-8">
                   <div class="toggle active">
                     <div></div>
@@ -185,7 +185,7 @@
               <table class="table">
                 <thead>
                   <tr>
-                    <th class="table-index"></th>
+                    <th class="table-index md:block hidden"></th>
                     <th>Name</th>
                     <th>Title</th>
                     <th>Email</th>
@@ -197,7 +197,7 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td class="table-index">
+                    <td class="table-index md:block hidden">
                       <div>1</div>
                     </td>
                     <td class="relative">
@@ -221,10 +221,13 @@
                     </td>
                     <td>
                       <div class="relative flex justify-end">
-                        <button class="flex-shrink-0 flex">
+                        <button
+                          class="flex-shrink-0 flex"
+                          @click="dropdownShow = !dropdownShow"
+                        >
                           <img src="./assets/icons/three-dots.svg" />
                         </button>
-                        <div class="dropdown">
+                        <div :class="`dropdown ${dropdownShow?'show':''}`">
                           <button class="dropdown-item">
                             <img src="./assets/icons/edit.svg" />
                             <span class="ml-2">Edit</span>
@@ -238,7 +241,7 @@
                     </td>
                   </tr>
                   <tr>
-                    <td class="table-index">
+                    <td class="table-index md:block hidden">
                       <div>2</div>
                     </td>
                     <td>
@@ -264,15 +267,24 @@
           </div>
           <!-- end of content card -->
 
-          <div class="mt-10 flex flex-row justify-end items-center">
-            <div class="flex-row flex mx-8">
-              <div class="toggle active">
+          <div class="mt-10 flex md:flex-row flex-col justify-end items-center">
+            <button
+              class="btn btn-accent btn-lg md:order-last w-full md:w-auto mb-6"
+            >
+              Add Directors
+            </button>
+
+            <!-- toggle input -->
+            <div class="flex-row flex mx-8 md:hidden">
+              <div
+                :class="`toggle ${toggleActive?'active':''}`"
+                @click="toggleActive=!toggleActive"
+              >
                 <div></div>
               </div>
               <label>Reorder Rows</label>
             </div>
-
-            <button class="btn btn-accent btn-lg">Add Directors</button>
+            <!-- end of toggle input -->
           </div>
         </div>
         <!-- end of content -->
@@ -288,5 +300,15 @@
       <!-- end of main content -->
     </main>
     <script src="https://unpkg.com/alpinejs" defer></script>
+    <script>
+      // this just for demo of preview image
+      document.addEventListener("alpine:init", () => {
+        Alpine.data("app", () => ({
+          toggleActive: true,
+          menuOpen: false,
+          dropdownShow: false,
+        }));
+      });
+    </script>
   </body>
 </html>
