@@ -49,14 +49,14 @@
         <div class="flex flex-row px-6">
           <div class="flex flex-row py-3 relative">
             <span class="mr-4 hidden md:block"> Sign in as test@test.com </span>
-            <button>
+            <button @click="()=>menuProfileOpen=!menuProfileOpen">
               <img
                 src="./assets/icons/arrow-down.svg"
                 class="hidden md:block"
               />
               <img src="./assets/icons/profile.svg" class="md:hidden" />
             </button>
-            <div class="dropdown">
+            <div :class="`dropdown ${menuProfileOpen?'show':''}`">
               <button class="dropdown-item">
                 <img src="./assets/icons/logout.svg" />
                 <span class="ml-2">Log Out</span>
@@ -164,15 +164,15 @@
       <!-- main content -->
       <div class="content-wrapper">
         <!-- content -->
-        <div class="p-6 text-primary w-4/5 mx-auto mt-14">
+        <div class="md:p-6 p-4 text-primary md:w-4/5 mx-auto md:mt-14 mt-7">
           <div class="flex flex-row justify-between">
-            <h1 class="text-title font-bold">History</h1>
-            <div>
+            <h1 class="text-title font-bold mb-2">History</h1>
+            <div class="hidden md:block">
               <button class="btn btn-transparent">Reset</button>
               <button class="btn btn-accent">Save</button>
             </div>
           </div>
-          <p class="text-gray-800 mb-6">
+          <p class="text-gray-800 mb-4 md:mb-6">
             Write the history with a specific audience in mind, for example, new
             website visitors or potential donors. Or, write a general history
             statement. Explain how and why your nonprofit was founded. Discuss
@@ -180,7 +180,7 @@
             about the nonprofit was setup, governed and funded.
           </p>
 
-          <div class="card p-6 mb-6">
+          <div class="card md:p-6 md:mb-6 p-4 mb-4">
             <h2 class="font-bold mb-4">Story / History Title</h2>
             <input
               placeholder="Placeholder"
@@ -189,64 +189,93 @@
             />
           </div>
 
-          <div class="card p-6 mb-6">
+          <div class="card md:p-6 md:mb-6 p-4 mb-4">
             <h2 class="font-bold mb-4">Story / History Description</h2>
+            <p class="text-gray-800 mb-4">
+              The United Nations International Children's Emergency Fund
+              (UNICEF) was created in 1946 to bring emergency food and health
+              care to children and mothers in countries devastated by World War
+              II.
+            </p>
             <div class="textarea">
-              <div class="textarea-toolbar">
-                <div class="flex flex-row flex-wrap">
-                  <button><image src="./assets/icons/bold.svg" /></button>
-                  <button><image src="./assets/icons/italic.svg" /></button>
-                  <button><image src="./assets/icons/underline.svg" /></button>
-                  <button><image src="./assets/icons/text-more.svg" /></button>
+              <div
+                class="textarea-toolbar md:flex-wrap overflow-x-auto md:flex-col"
+              >
+                <div
+                  class="flex flex-row flex-shrink-0 md:w-full justify-between"
+                >
+                  <div>
+                    <button><image src="./assets/icons/bold.svg" /></button>
+                    <button><image src="./assets/icons/italic.svg" /></button>
+                    <button>
+                      <image src="./assets/icons/underline.svg" />
+                    </button>
+                    <button>
+                      <image src="./assets/icons/text-more.svg" />
+                    </button>
+                  </div>
 
-                  <div class="w-4"></div>
+                  <div>
+                    <button>
+                      <image src="./assets/icons/align-left.svg" />
+                    </button>
+                    <button>
+                      <image src="./assets/icons/align-center.svg" />
+                    </button>
+                    <button>
+                      <image src="./assets/icons/ordered-list.svg" />
+                    </button>
+                    <button>
+                      <image src="./assets/icons/paragraph-more.svg" />
+                    </button>
+                  </div>
 
-                  <button><image src="./assets/icons/align-left.svg" /></button>
-                  <button>
-                    <image src="./assets/icons/align-center.svg" />
-                  </button>
-                  <button>
-                    <image src="./assets/icons/ordered-list.svg" />
-                  </button>
-                  <button>
-                    <image src="./assets/icons/paragraph-more.svg" />
-                  </button>
+                  <div>
+                    <button>
+                      <image src="./assets/icons/insert-link.svg" />
+                    </button>
+                    <button>
+                      <image src="./assets/icons/insert-image.svg" />
+                    </button>
+                    <button>
+                      <image src="./assets/icons/smile.svg" />
+                    </button>
+                    <button>
+                      <image src="./assets/icons/insert-more.svg" />
+                    </button>
+                  </div>
 
-                  <div class="w-4"></div>
-
-                  <button>
-                    <image src="./assets/icons/insert-link.svg" />
-                  </button>
-                  <button>
-                    <image src="./assets/icons/insert-image.svg" />
-                  </button>
-                  <button>
-                    <image src="./assets/icons/smile.svg" />
-                  </button>
-                  <button>
-                    <image src="./assets/icons/insert-more.svg" />
-                  </button>
-                </div>
-
-                <div class="flex flex-row flex-grow justify-end">
-                  <button>
-                    <image src="./assets/icons/undo.svg" />
-                  </button>
-                  <button>
-                    <image src="./assets/icons/redo.svg" />
-                  </button>
-                  <button>
-                    <image src="./assets/icons/more.svg" />
-                  </button>
+                  <div>
+                    <button>
+                      <image src="./assets/icons/undo.svg" />
+                    </button>
+                    <button>
+                      <image src="./assets/icons/redo.svg" />
+                    </button>
+                    <button>
+                      <image src="./assets/icons/more.svg" />
+                    </button>
+                  </div>
                 </div>
               </div>
               <textarea placeholder="Placeholder" rows="4"></textarea>
             </div>
           </div>
 
-          <div class="card p-6 mb-6">
+          <div class="card md:p-6 md:mb-6 p-4 mb-4">
             <h2 class="font-bold mb-4">History Image</h2>
-            <div class="flex flex-row flex-wrap">
+
+            <!-- drag and drop input -->
+            <div class="uploader mb-4 md:mb-6">
+              <div class="max-w-lg">
+                Upload an image that represents your history
+              </div>
+              <div>Drag or click to upload</div>
+            </div>
+            <!-- end of drag and drop input -->
+
+            <!-- image upload tumbnail -->
+            <div class="flex flex-row flex-wrap mb-4 md:mb-6">
               <div class="h-[150px] w-[150px] relative">
                 <button
                   class="absolute right-0 translate-x-1/2 -translate-y-1/2"
@@ -260,11 +289,32 @@
                 />
               </div>
             </div>
+            <!-- end of image upload thumbnail -->
+
+            <!-- image upload without thumbnail -->
+            <div class="flex flex-row flex-wrap">
+              <div
+                class="p-4 rounded-lg bg-gray-50 w-full flex flex-row items-center justify-between"
+              >
+                <div
+                  class="text-sm text-gray-800 w-full"
+                  @click="modalShow = true"
+                >
+                  file123.jpg
+                </div>
+                <button>
+                  <img src="./assets/icons/close-square.svg" class="h-6 w-6" />
+                </button>
+              </div>
+            </div>
+            <!-- end og image upload without thumbnail -->
           </div>
 
-          <div class="flex flex-row justify-end">
+          <div class="flex md:flex-row justify-end flex-col">
+            <button class="btn btn-accent btn-lg md:order-last mb-4">
+              Save
+            </button>
             <button class="btn btn-transparent btn-lg">Reset</button>
-            <button class="btn btn-accent btn-lg">Save</button>
           </div>
         </div>
         <!-- end of content -->
@@ -280,16 +330,19 @@
       <!-- end of main content -->
 
       <!-- image preview -->
-      <div :class="`modal ${modalShow?'show':''}`">
+      <div :class="`modal ${modalShow?'show':''} px-4`">
         <button
-          class="absolute top-0 right-0 mt-11 mr-11"
+          class="absolute top-0 right-0 md:mt-11 md:mr-11 mt-4 mr-4"
           @click="modalShow = false"
         >
-          <img src="./assets/icons/close-x.svg" />
+          <img
+            src="./assets/icons/close-x.svg"
+            class="h-6 w-6 md:h-10 md:w-10"
+          />
         </button>
         <img
           src="https://picsum.photos/seed/history/983/983"
-          class="object-contain max-w-[80vh] rounded-lg"
+          class="object-contain md:max-w-[80vh] rounded-lg flex"
         />
       </div>
       <!-- end of image preview -->
@@ -301,6 +354,7 @@
     // this just for demo of preview image
     document.addEventListener("alpine:init", () => {
       Alpine.data("app", () => ({
+        menuProfileOpen: false,
         menuOpen: false,
         modalShow: false,
         onMount() {

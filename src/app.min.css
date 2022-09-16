@@ -574,14 +574,17 @@ video {
 .mb-4{
   margin-bottom: 1rem;
 }
+.mt-7{
+  margin-top: 1.75rem;
+}
+.mb-2{
+  margin-bottom: 0.5rem;
+}
 .mt-11{
   margin-top: 2.75rem;
 }
 .mr-11{
   margin-right: 2.75rem;
-}
-.mt-7{
-  margin-top: 1.75rem;
 }
 .mt-4{
   margin-top: 1rem;
@@ -637,9 +640,6 @@ video {
 .w-3\/4{
   width: 75%;
 }
-.w-4{
-  width: 1rem;
-}
 .w-\[150px\]{
   width: 150px;
 }
@@ -663,9 +663,6 @@ video {
 }
 .flex-shrink-0{
   flex-shrink: 0;
-}
-.flex-grow{
-  flex-grow: 1;
 }
 .translate-x-1\/2{
   --tw-translate-x: 50%;
@@ -705,6 +702,9 @@ video {
 .overflow-hidden{
   overflow: hidden;
 }
+.overflow-x-auto{
+  overflow-x: auto;
+}
 .rounded-2xl{
   border-radius: 1rem;
 }
@@ -722,6 +722,9 @@ video {
 }
 .bg-tertiary{
   background-color: var(--bg-tertiary);
+}
+.bg-gray-50{
+  background-color: Var(--c-gray-50);
 }
 .object-contain{
   -o-object-fit: contain;
@@ -751,6 +754,10 @@ video {
 .px-3{
   padding-left: 0.75rem;
   padding-right: 0.75rem;
+}
+.px-4{
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 .pl-10{
   padding-left: 2.5rem;
@@ -891,11 +898,14 @@ video {
       width: calc(100% - 16px);
   }
       }
+.dropdown.show{
+  display: flex;
+}
 .dropdown{
   position: absolute;
   right: 0px;
   top: 100%;
-  display: flex;
+  display: none;
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
@@ -982,6 +992,14 @@ select.input-field{
     background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M21.25 12.0005C21.25 17.1095 17.109 21.2505 12 21.2505C6.891 21.2505 2.75 17.1095 2.75 12.0005C2.75 6.8915 6.891 2.7505 12 2.7505C17.109 2.7505 21.25 6.8915 21.25 12.0005Z' stroke='%23CCCCCC' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M15.4311 14.9429L11.6611 12.6939V7.8469' stroke='%23CCCCCC' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
     background-position: calc(100% - 1rem) center;
 }
+.textarea {
+  max-width: calc(100vw - 4rem);
+}
+@media (min-width: 768px) {
+.textarea {
+    max-width: 100%
+}
+  }
 .textarea{
   border-radius: 0.5rem;
   border-width: 1px;
@@ -989,17 +1007,21 @@ select.input-field{
 }
 .textarea-toolbar{
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
   background-color: var(--c-gray-200);
 }
 .textarea-toolbar button{
   height: 3.5rem;
+  flex-shrink: 0;
   padding-left: 0.75rem;
   padding-right: 0.75rem;
 }
+@media (min-width: 768px) {
+.textarea-toolbar button{
+    flex-shrink: 1;
+  }
+      }
 .textarea-toolbar button img{
   height: 100%;
   height: 1.5rem;
@@ -1026,7 +1048,7 @@ textarea.input-field{
   cursor: pointer;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-evenly;
   background-color: Var(--c-gray-50);
   padding-top: 2.5rem;
   padding-bottom: 2.5rem;
@@ -1250,11 +1272,11 @@ ul.item-circle li {
     flex-direction: row;
     justify-content: space-between;
   }
+.md\:absolute{
+    position: absolute;
+  }
 .md\:order-last{
     order: 9999;
-  }
-.md\:mb-8{
-    margin-bottom: 2rem;
   }
 .md\:mt-14{
     margin-top: 3.5rem;
@@ -1262,8 +1284,17 @@ ul.item-circle li {
 .md\:mb-6{
     margin-bottom: 1.5rem;
   }
+.md\:mb-8{
+    margin-bottom: 2rem;
+  }
 .md\:mb-0{
     margin-bottom: 0px;
+  }
+.md\:mt-11{
+    margin-top: 2.75rem;
+  }
+.md\:mr-11{
+    margin-right: 2.75rem;
   }
 .md\:block{
     display: block;
@@ -1271,11 +1302,17 @@ ul.item-circle li {
 .md\:hidden{
     display: none;
   }
+.md\:h-10{
+    height: 2.5rem;
+  }
 .md\:w-\[260px\]{
     width: 260px;
   }
 .md\:w-4\/5{
     width: 80%;
+  }
+.md\:w-full{
+    width: 100%;
   }
 .md\:w-1\/2{
     width: 50%;
@@ -1283,11 +1320,23 @@ ul.item-circle li {
 .md\:w-1\/4{
     width: 25%;
   }
+.md\:w-10{
+    width: 2.5rem;
+  }
+.md\:max-w-\[80vh\]{
+    max-width: 80vh;
+  }
 .md\:grid-cols-4{
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 .md\:flex-row{
     flex-direction: row;
+  }
+.md\:flex-col{
+    flex-direction: column;
+  }
+.md\:flex-wrap{
+    flex-wrap: wrap;
   }
 .md\:p-6{
     padding: 1.5rem;
