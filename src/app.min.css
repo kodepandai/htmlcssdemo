@@ -565,17 +565,14 @@ video {
 .mr-8{
   margin-right: 2rem;
 }
-.mt-14{
-  margin-top: 3.5rem;
+.mt-7{
+  margin-top: 1.75rem;
 }
 .ml-5{
   margin-left: 1.25rem;
 }
 .mb-4{
   margin-bottom: 1rem;
-}
-.mt-7{
-  margin-top: 1.75rem;
 }
 .mb-2{
   margin-bottom: 0.5rem;
@@ -625,23 +622,14 @@ video {
 .w-10{
   width: 2.5rem;
 }
-.w-4\/5{
-  width: 80%;
-}
-.w-1\/4{
-  width: 25%;
-}
-.w-3\/4{
-  width: 75%;
+.w-1\/2{
+  width: 50%;
 }
 .w-\[150px\]{
   width: 150px;
 }
 .w-6{
   width: 1.5rem;
-}
-.w-1\/2{
-  width: 50%;
 }
 .min-w-\[150px\]{
   min-width: 150px;
@@ -933,16 +921,40 @@ video {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
 }
+input, 
+textarea, 
+select{
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+@media (min-width: 768px) {
+input, 
+textarea, 
+select{
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+  }
 input::-moz-placeholder, textarea::-moz-placeholder, select::-moz-placeholder{
-  font-size: 0.875rem;
-  line-height: 1.25rem;
+  font-size: 0.75rem;
+  line-height: 1rem;
   color: var(--c-gray-300);
 }
 input::placeholder,  textarea::placeholder,  select::placeholder{
-  font-size: 0.875rem;
-  line-height: 1.25rem;
+  font-size: 0.75rem;
+  line-height: 1rem;
   color: var(--c-gray-300);
 }
+@media (min-width: 768px) {
+input::-moz-placeholder, textarea::-moz-placeholder, select::-moz-placeholder{
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+input::placeholder,  textarea::placeholder,  select::placeholder{
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+    }
 input:focus-visible,  textarea:focus-visible,  select:focus-visible{
   outline-color: var(--c-gray-300);
 }
@@ -1307,6 +1319,9 @@ ul.item-circle li {
 .md\:mb-6{
     margin-bottom: 1.5rem;
   }
+.md\:mb-0{
+    margin-bottom: 0px;
+  }
 .md\:mt-11{
     margin-top: 2.75rem;
   }
@@ -1315,9 +1330,6 @@ ul.item-circle li {
   }
 .md\:mb-8{
     margin-bottom: 2rem;
-  }
-.md\:mb-0{
-    margin-bottom: 0px;
   }
 .md\:block{
     display: block;
@@ -1340,6 +1352,12 @@ ul.item-circle li {
 .md\:w-4\/5{
     width: 80%;
   }
+.md\:w-1\/4{
+    width: 25%;
+  }
+.md\:w-3\/4{
+    width: 75%;
+  }
 .md\:w-full{
     width: 100%;
   }
@@ -1348,9 +1366,6 @@ ul.item-circle li {
   }
 .md\:w-1\/2{
     width: 50%;
-  }
-.md\:w-1\/4{
-    width: 25%;
   }
 .md\:max-w-\[80vh\]{
     max-width: 80vh;

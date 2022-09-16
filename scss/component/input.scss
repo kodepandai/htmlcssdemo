@@ -1,8 +1,15 @@
 input,
 textarea,
 select {
+  @apply text-xs;
+  @media screen(md) {
+    @apply text-sm;
+  }
   &::placeholder {
-    @apply text-gray-300 text-sm;
+    @apply text-gray-300 text-xs;
+    @media screen(md) {
+      @apply text-sm;
+    }
   }
   &:focus-visible {
     @apply outline-gray-300;
