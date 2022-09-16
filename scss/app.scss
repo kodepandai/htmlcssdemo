@@ -58,3 +58,10 @@ ul.item-circle {
     @apply pl-[260px] mt-[83px];
   }
 }
+
+.footer {
+  @apply py-4 px-6 text-sm text-primary flex-col flex items-center leading-7;
+  @media screen(md) {
+    @apply flex-row justify-between;
+  }
+}
