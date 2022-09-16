@@ -687,9 +687,6 @@ video {
 .justify-between{
   justify-content: space-between;
 }
-.gap-8{
-  gap: 2rem;
-}
 .gap-4{
   gap: 1rem;
 }
@@ -733,9 +730,6 @@ video {
 }
 .p-6{
   padding: 1.5rem;
-}
-.p-10{
-  padding: 2.5rem;
 }
 .px-6{
   padding-left: 1.5rem;
@@ -862,11 +856,19 @@ video {
 }
 .calendar-date > div{
   position: relative;
+  display: flex;
+  min-height: 40px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 @media (min-width: 768px) {
 .calendar-date > div{
     display: flex;
     width: 100%;
+    flex-direction: row;
+    align-items: flex-start;
     justify-content: flex-end;
     border-width: 1px;
     padding-bottom: 60%;
@@ -875,6 +877,15 @@ video {
     position: absolute;
     padding: 0.75rem;
   }
+      }
+.calendar-event{
+  height: 0.25rem;
+  width: 0.25rem;
+  overflow: hidden;
+  border-radius: 9999px;
+  background-color: rgb(var(--bg-accent)/var(--tw-bg-opacity));
+}
+@media (min-width: 768px) {
 .calendar-event{
     position: absolute;
     bottom: 0.5rem;
@@ -891,7 +902,7 @@ video {
     color: var(--c-accent);
       width: calc(100% - 16px);
   }
-      }
+    }
 .dropdown.show{
   display: flex;
 }
