@@ -23,8 +23,12 @@
 
   /* fonts */
   --font-sans: "Inter", sans-serif;
-  --size-title: 2rem;
-  --size-subtitle: 1.25rem;
+  @media screen(md) {
+    --size-title: 2rem;
+    --size-subtitle: 1.25rem;
+  }
+  --size-title: 1.25rem;
+  --size-subtitle: 1rem;
 
   /* shadow */
   --shadow-default: 0px 8px 16px 0px #00000;

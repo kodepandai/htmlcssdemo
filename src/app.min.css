@@ -745,10 +745,6 @@ video {
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
 }
-.py-4{
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-}
 .px-3{
   padding-left: 0.75rem;
   padding-right: 0.75rem;
@@ -811,10 +807,18 @@ video {
 
   /* fonts */
   --font-sans: "Inter", sans-serif;
-  --size-title: 2rem;
-  --size-subtitle: 1.25rem;
 
   /* shadow */
+}
+@media (min-width: 768px) {
+:root {
+    --size-title: 2rem;
+    --size-subtitle: 1.25rem;
+}
+  }
+:root{
+  --size-title: 1.25rem;
+  --size-subtitle: 1rem;
   --shadow-default: 0px 8px 16px 0px #00000;
 }
 /* import components */
@@ -1162,7 +1166,15 @@ textarea.input-field{
   }
 p {
   line-height: 25.6px;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
 }
+@media (min-width: 768px) {
+p{
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+  }
 .card{
   border-radius: 1rem;
   border-width: 1px;
@@ -1183,7 +1195,17 @@ p {
 .modal.show{
   display: flex;
 }
-ul.item-circle {
+ul.item-circle{
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+@media (min-width: 768px) {
+ul.item-circle{
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+  }
+ul.item-circle{
   list-style-position: outside;
 }
 ul.item-circle li {
@@ -1220,6 +1242,9 @@ ul.item-circle li {
     flex-direction: row;
     justify-content: space-between;
   }
+.md\:mb-8{
+    margin-bottom: 2rem;
+  }
 .md\:block{
     display: block;
   }
@@ -1231,6 +1256,12 @@ ul.item-circle li {
   }
 .md\:grid-cols-4{
     grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+.md\:p-6{
+    padding: 1.5rem;
+  }
+.md\:p-10{
+    padding: 2.5rem;
   }
   }
 @media (min-width: 1024px){

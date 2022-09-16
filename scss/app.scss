@@ -32,6 +32,10 @@
 
 p {
   line-height: 25.6px;
+  @apply text-sm;
+  @media screen(md) {
+    @apply text-base;
+  }
 }
 
 .card {
@@ -45,6 +49,10 @@ p {
   }
 }
 ul.item-circle {
+  @apply text-sm;
+  @media screen(md) {
+    @apply text-base;
+  }
   list-style-position: outside;
   li {
     list-style-type: disc;
