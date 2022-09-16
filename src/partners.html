@@ -167,8 +167,8 @@
       <!-- main content -->
       <div class="content-wrapper">
         <!-- content -->
-        <div class="p-6 text-primary">
-          <div class="card p-10 bg-primary">
+        <div class="md:p-6 p-4 text-primary">
+          <div class="card md:p-10 p-4 bg-primary">
             <h1 class="text-title font-bold mb-4">Partners</h1>
 
             <!-- uploader -->
@@ -188,7 +188,9 @@
               <span class="text-sm text-gray-800 ml-4">10/50 files</span>
             </div>
 
-            <div class="grid md:grid-cols-4 lg:grid-cols-6 grid-cols-2 gap-8">
+            <div
+              class="grid md:grid-cols-4 lg:grid-cols-6 grid-cols-2 md:gap-8 gap-4"
+            >
               <!-- thumbnail upload, repeat 10 times -->
               <template x-for="(image, index) in Array.from({length:10})">
                 <div class="w-full pb-[100%] relative">

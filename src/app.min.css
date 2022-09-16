@@ -690,6 +690,9 @@ video {
 .gap-8{
   gap: 2rem;
 }
+.gap-4{
+  gap: 1rem;
+}
 .overflow-hidden{
   overflow: hidden;
 }
@@ -1041,15 +1044,21 @@ textarea.input-field{
   align-items: center;
   justify-content: space-evenly;
   background-color: Var(--c-gray-50);
-  padding-top: 2.5rem;
-  padding-bottom: 2.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
   text-align: center;
-  font-size: 0.875rem;
+  font-size: 0.75rem;
   line-height: 1rem;
   color: var(--c-gray-800);
   background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='8' ry='8' stroke='%23CCCCCCFF' stroke-width='2' stroke-dasharray='8%2c 8' stroke-dashoffset='7' stroke-linecap='square'/%3e%3c/svg%3e");
   border-radius: 8px;
 }
+@media (min-width: 768px) {
+.uploader{
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+  }
 .side-menu{
   display: flex;
   flex-direction: column;
@@ -1346,6 +1355,9 @@ ul.item-circle li {
   }
 .md\:flex-wrap{
     flex-wrap: wrap;
+  }
+.md\:gap-8{
+    gap: 2rem;
   }
 .md\:p-6{
     padding: 1.5rem;
